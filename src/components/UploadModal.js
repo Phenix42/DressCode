@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './UploadModal.css'; // Custom CSS file for additional styling
-import api from './api'; 
+import './UploadModal.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
@@ -50,11 +49,11 @@ const UploadModal = ({ activeTab, setInventoryData, inventoryData }) => {
           'Content-Type': 'multipart/form-data'
         }
       });
-      // Assuming the response contains the updated inventory data
+     
       setInventoryData(response.data);
       console.log('File submitted successfully:', response.data);
 
-      // Close the modal
+
       const modalElement = document.getElementById('uploadModal');
       const modal = window.bootstrap.Modal.getInstance(modalElement);
       modal.hide();

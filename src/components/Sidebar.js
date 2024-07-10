@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './Sidebar.css';
 import Images from './Images/Logo.svg';
 import arrow from './Images/arrow.svg';
-// Add this line to import hamburger icon
 import { 
   overview,
   inventory,
