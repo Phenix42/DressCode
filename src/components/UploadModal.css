@@ -1,0 +1,54 @@
+/* Custom CSS for UploadModal */
+
+.btn-light-green {
+    background-color: #90EE90;
+    color: white;
+  }
+  
+  .btn-light-green:hover {
+    background-color: #7ED37E;
+    color: white;
+  }
+  
+  .modal-header {
+    justify-content: center;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+  }
+  
+  .modal-body {
+    text-align: left;
+  }
+  
+  a {
+    color: #0000EE;
+  }
+  
+  a:hover {
+    color: #551A8B;
+  }
+  
+  .custom-file-upload {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  .upload-icon {
+    margin-right: 10px;
+  }
+  

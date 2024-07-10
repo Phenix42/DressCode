@@ -1,0 +1,122 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  transition: left 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.close-sidebar,
+.shrink-sidebar {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 24px;
+}
+
+.shrink-sidebar {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-logo {
+  padding: 20px;
+  text-align: center;
+}
+
+.Logopng {
+  width: 149px;
+  height: 35.036px;
+  margin-left: 50px;
+}
+
+.nav-link {
+  padding: 10px 15px;
+  color: #7C8DB5;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+
+  color: #347AE2;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.arrowClose {
+  width: 51px;
+  height: 0px;
+  stroke-width: 2px;
+  stroke: #FFF;
+}
+
+.btn-primary {
+  border-radius: 0%;
+  background: #347AE2;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    left: 0;
+    width: 300px;
+  }
+
+  .main-content {
+    margin-left: 300px;
+  }
+
+  .close-sidebar {
+    display: none;
+  }
+}
+
+
+
+.btn-multiline {
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.btn-primary {
+  border-radius: 0%;
+  background: #347AE2;
+}
+
+.btn-light {
+  flex-shrink: 0;
+  border-radius: 0%;
+}
+
+.tab-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
