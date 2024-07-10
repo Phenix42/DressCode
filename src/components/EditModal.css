@@ -1,0 +1,9 @@
+.table-header {
+    padding-right: 30px; /* Adjust this value as needed */
+    vertical-align: middle; /* Optional: centers the text vertically */
+  }
+  
+  .table-data {
+    padding-left: 15px; /* Adjust this value as needed */
+    vertical-align: middle; /* Optional: centers the text vertically */
+  }

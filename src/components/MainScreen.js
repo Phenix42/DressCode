@@ -116,6 +116,7 @@ const MainScreen = () => {
         </div>
       </header>
       <p className="text-muted">Here is the information about all your orders</p>
+      <div className="marg"></div>
       <div className="mb-3 tab-scroll">
         {tabs.map((tab) => (
           <button

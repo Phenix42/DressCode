@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './UploadModal.css'; 
+import api from './api';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 

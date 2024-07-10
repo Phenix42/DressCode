@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './EditModal.css'
 
 const EditModal = ({ show, handleClose, handleSave, item }) => {
   const [price, setPrice] = useState(item.price);
@@ -11,75 +12,79 @@ const EditModal = ({ show, handleClose, handleSave, item }) => {
 
   return (
     <div className={`modal fade ${show ? 'show d-block' : 'd-none'}`} tabIndex="-1" role="dialog">
-      <div className="modal-dialog" role="document">
+      <div className="modal-dialog" role="document" style={{ maxWidth: 400 }}>
         <div className="modal-content">
-          <div className="modal-header">
-            <h5 className="modal-title">Edit Product</h5>
-            <button type="button" className="close" onClick={handleClose} aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
           <div className="modal-body">
             <form>
-              <div className="form-group">
-                <label>Category</label>
-                <input type="text" className="form-control" value={item.pCategory} readOnly />
-              </div>
-              <div className="form-group">
-                <label>S Category</label>
-                <input type="text" className="form-control" value={item.sCategory} readOnly />
-              </div>
-              <div className="form-group">
-                <label>Gender</label>
-                <input type="text" className="form-control" value={item.gender} readOnly />
-              </div>
-              <div className="form-group">
-                <label>TOW</label>
-                <input type="text" className="form-control" value={item.pattern} readOnly />
-              </div>
-              <div className="form-group">
-                <label>P Name</label>
-                <input type="text" className="form-control" value={item.pName} readOnly />
-              </div>
-              <div className="form-group">
-                <label>P ID</label>
-                <input type="text" className="form-control" value={item.pId} readOnly />
-              </div>
-              <div className="form-group">
-                <label>Fabric</label>
-                <input type="text" className="form-control" value={item.fabric} readOnly />
-              </div>
-              <div className="form-group">
-                <label>Color</label>
-                <input type="text" className="form-control" value={item.color} readOnly />
-              </div>
-              <div className="form-group">
-                <label>Size</label>
-                <input type="text" className="form-control" value={item.size} readOnly />
-              </div>
-              <div className="form-group">
-                <label>Price</label>
-                <input
-                  type="number"
-                  className="form-control"
-                  value={price}
-                  onChange={(e) => setPrice(e.target.value)}
-                />
-              </div>
-              <div className="form-group">
-                <label>Quantity</label>
-                <input
-                  type="number"
-                  className="form-control"
-                  value={quantity}
-                  onChange={(e) => setQuantity(e.target.value)}
-                />
-              </div>
+              <table className="table table-borderless">
+                <tbody>
+                  <tr>
+                    <th scope="row" className="table-header">Category</th>
+                    <td className="table-data">{item.pCategory}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">S Category</th>
+                    <td className="table-data">{item.sCategory}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Gender</th>
+                    <td className="table-data">{item.gender}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">TOW</th>
+                    <td className="table-data">{item.pattern}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">P Name</th>
+                    <td className="table-data">{item.pName}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">P ID</th>
+                    <td className="table-data">{item.pId}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Fabric</th>
+                    <td className="table-data">{item.fabric}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Color</th>
+                    <td className="table-data">{item.color}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Size</th>
+                    <td className="table-data">{item.size}</td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Price</th>
+                    <td className="table-data">
+                      <input
+                        type="number"
+                        className="form-control"
+                        style={{ width: '50%' }}
+                        value={price}
+                        onChange={(e) => setPrice(e.target.value)}
+                      />
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row" className="table-header">Quantity</th>
+                    <td className="table-data">
+                      <input
+                        type="number"
+                        className="form-control"
+                        style={{ width: '50%' }}
+                        value={quantity}
+                        onChange={(e) => setQuantity(e.target.value)}
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </form>
           </div>
-          <div className="modal-footer">
+          <div className="modal-footer d-flex justify-content-between">
             <button type="button" className="btn btn-secondary" onClick={handleClose}>Cancel</button>
-            <button type="button" className="btn btn-primary" onClick={onSave}>Submit</button>
+            <button type="button" className="btn btn-success" onClick={onSave}>Submit</button>
           </div>
         </div>
       </div>

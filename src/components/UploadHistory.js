@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from './Header';
+
 
 const UploadHistory = () => {
   const uploadHistoryData = [
@@ -10,13 +12,7 @@ const UploadHistory = () => {
 
   return (
     <div className="main-content">
-            <header className="d-flex justify-content-between align-items-center my-3">
-        <h2 className="mb-0">Welcome Back, Madhur</h2>
-        <div>
-          <img src="profile-placeholder.jpg" alt="Profile" className="rounded-circle profile-image" width="40" height="40" />
-        </div>
-      </header>
-      <p className="text-muted">Here is the information about all your orders</p>
+   <Header/>
       <h2>Upload Inventory History List</h2>
       <table className="table table-striped mt-3">
         <thead>
