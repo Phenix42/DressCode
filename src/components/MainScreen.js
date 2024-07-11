@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import UploadModal from './UploadModal';
 import './Sidebar.css';
 import api from './api';
+import './Inventory.css';
 import EditModal from './EditModal';
 import { 
   edit,

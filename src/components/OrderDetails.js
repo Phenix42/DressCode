@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import api from './api'; 
 import './Loader.css';
+import Header from './Header';
 
 const OrderDetails = ({ userName }) => {
   const [orderDetails, setOrderDetails] = useState(null);
@@ -55,20 +56,7 @@ const OrderDetails = ({ userName }) => {
 
   return (
     <div className="main-content">
-      <div className="container mt-5">
-        <div className="row mb-4">
-          <div className="col">
-            <h5>Welcome Back, {userName}</h5>
-            <a>Here is the information about all your orders</a>
-          </div>
-          <div className="col text-right">
-            <button className="btn btn-outline-secondary mr-2">
-              <i className="fa fa-search"></i>
-            </button>
-            <span>{userName}</span>
-          </div>
-        </div>
-
+      <Header/>
         {orderDetails ? (
           <React.Fragment>
             <div className="row mb-3">
@@ -185,7 +173,7 @@ const OrderDetails = ({ userName }) => {
             {isLoading ? 'Assigning...' : 'Assign to Shiprocket'}
           </button>
         </div>
-      </div>
+   
     </div>
   );
 };

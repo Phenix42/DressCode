@@ -13,6 +13,7 @@ const UploadHistory = () => {
   return (
     <div className="main-content">
    <Header/>
+   <div className="marg" style={{marginBottom:100}}></div>
       <h2>Upload Inventory History List</h2>
       <table className="table table-striped mt-3">
         <thead>

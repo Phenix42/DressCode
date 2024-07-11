@@ -1,0 +1,16 @@
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: transparent !important;
+  }
+  
+  .table-striped tbody tr:nth-of-type(even) {
+    background-color: transparent !important;
+  }
+  
+  .table-striped td {
+    background-color: transparent !important;
+  }
+  
+  .table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-accent-bg: transparent !important;
+    color: var(--bs-table-striped-color);
+}

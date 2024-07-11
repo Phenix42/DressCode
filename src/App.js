@@ -21,6 +21,14 @@ const App = () => {
             <Route path="/Qoute" element={<Qoute/>}/>
             <Route path="/quote/:quoteId" element={<QuoteOrderDetailsPage/>} />
             <Route path="/online-orders" element={<OrderDetails/>} />
+            <Route path="/store-creation" element={<FutureScreen/>} />
+            <Route path="/assign-inventory" element={<FutureScreen/>} />
+            <Route path="/raised-requests" element={<FutureScreen/>} />
+            <Route path="/assigned-inventory" element={<FutureScreen/>} />
+            <Route path="/discount-codes" element={<FutureScreen/>} />
+            <Route path="/edit-bills" element={<FutureScreen/>} />
+            <Route path="/deleted-bills" element={<FutureScreen/>} />
+            <Route path="/refund-requests" element={<FutureScreen/>} />
           </Routes>
         </div>
       </div>
@@ -38,5 +46,15 @@ const EmptyScreen = () => {
     </div>
   );
 };
-
+const FutureScreen =() =>
+  {
+    return(
+      <div className="main-content">
+      <div className='maincontent'>
+        <h1>Welcome to the Dashboard</h1>
+        <p>comming soon.............</p>
+      </div>
+      </div>
+    );
+  }
 export default App;

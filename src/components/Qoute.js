@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import api from './api'; 
 import Layout from './Layout';
-
+import Header from './Header';
+import './Loader.css';
 const QuoteOrderDetails = ({ userName }) => {
   const [quoteOrders, setQuoteOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -28,13 +29,15 @@ const QuoteOrderDetails = ({ userName }) => {
     fetchQuoteOrders();
   }, [token]);
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+
 
   return (
-    <Layout userName={userName}>
-      <h3 className="text-center mb-3">Quote Order Details</h3>
+    <div className="main-content">
+    <Header/>
+    {!isLoading ?( 
+        <React.Fragment>
+          <div style={{marginBottom:100}}></div>
+            <h3 className="text-center mb-3">Quote Order Details</h3>
       <table className="table table-striped">
         <thead>
           <tr>
@@ -57,7 +60,17 @@ const QuoteOrderDetails = ({ userName }) => {
           ))}
         </tbody>
       </table>
-    </Layout>
+
+        </React.Fragment>
+    
+  
+    ):( <div className="loader">
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+    </div>)}
+</div>
   );
 };
 
